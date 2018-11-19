@@ -34,10 +34,10 @@ fun! ShowFuncName()
   echohl None
   call search("\\%" . lnum . "l" . "\\%" . col . "c")
 endfun
-syntax off
 
 :autocmd FileType make set noexpandtab
 :autocmd FileType make set softtabstop=0
+
 :map <F5> A<Cr>/**@file<Cr>    \brief<Cr>    \details<Cr>*/<Esc>
 if( &filetype=="perl")
 endif
